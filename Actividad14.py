@@ -21,7 +21,9 @@ def menu():
             case _:
                 print("Ingrese una opción válida")
 
+def ordenar_participantespornombre(participantes):
 
+def ordenar_participantesporedad(participantes):
 def agregar_participante(participantes):
     ingreso = int(input("¿Cuantos participantes desea ingresar? : "))
     for i in range (ingreso):
