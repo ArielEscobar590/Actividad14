@@ -1,12 +1,26 @@
 def menu():
     participantes = []
-    while True:
+    op = 0
+    while op != 4:
         print("\n--- MENÚ DE OPCIONES ---")
         print("1. Agregar participante")
         print("2. Mostrar participantes ordenados por nombre")
         print("3. Mostrar participantes ordenados por edad")
         print("4. Salir")
         opcion = int(input("Seleccione una opción: "))
+
+        match op:
+            case 1:
+                agregar_participante(participantes)
+            case 2:
+                break
+            case 3:
+                break
+            case 4:
+                 print("Nos  vemos")
+            case _:
+                print("Ingrese una opción válida")
+
 
 def agregar_participante(participantes):
     ingreso = int(input("¿Cuantos participantes desea ingresar? : "))
