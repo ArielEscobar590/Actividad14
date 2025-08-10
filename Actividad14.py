@@ -21,9 +21,16 @@ def menu():
             case _:
                 print("Ingrese una opción válida")
 
-def ordenar_participantespornombre(participantes):
+def ordenar_participantesedad(lista):
+    if len(lista) <= 1:
+        return lista[:]
+    pivote = lista[0]
+    menores = [x for x in lista[1:] if x < pivote]
+    iguales = [x for x in lista if x == pivote]  # incluye el pivote y otras iguales
+    mayores = [x for x in lista[1:] if x > pivote]
+    return ordenar_participantesedad(menores) + iguales + ordenar_participantesedad(mayores)
 
-def ordenar_participantesporedad(participantes):
+
 def agregar_participante(participantes):
     ingreso = int(input("¿Cuantos participantes desea ingresar? : "))
     for i in range (ingreso):
