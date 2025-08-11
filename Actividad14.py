@@ -13,7 +13,7 @@ def menu():
             case 1:
                 agregar_participante(participantes)
             case 2:
-                break
+                ordenar_participantesedad(participantes)
             case 3:
                 break
             case 4:
@@ -26,7 +26,7 @@ def ordenar_participantesedad(lista):
         return lista[:]
     pivote = lista[0]
     menores = [x for x in lista[1:] if x < pivote]
-    iguales = [x for x in lista if x == pivote]  # incluye el pivote y otras iguales
+    iguales = [x for x in lista if x == pivote]
     mayores = [x for x in lista[1:] if x > pivote]
     return ordenar_participantesedad(menores) + iguales + ordenar_participantesedad(mayores)
 
